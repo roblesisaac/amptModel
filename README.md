@@ -9,4 +9,4 @@ Mongoose like models for ampt data
 To install the dependencies, run the following command:
 
 ```bash
-npm install amptModel
+npm install ampt-models
