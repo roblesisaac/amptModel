@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Mongoose like models for ampt data",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "vitest --coverage"
   },
