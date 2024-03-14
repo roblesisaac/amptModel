@@ -34,7 +34,6 @@ export function pacificTimezoneOffset() {
 }
 
 export function validDate(inputDate) {
-    console.log('inputDate', inputDate)
     if (inputDate) {
         const [date, time] = inputDate.split('T');
         const [year, month, day] = date.split('-');
