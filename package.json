@@ -1,0 +1,27 @@
+{
+  "name": "amptmodel",
+  "version": "1.0.0",
+  "description": "Mongoose like models for ampt data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roblesisaac/amptModel.git"
+  },
+  "keywords": [
+    "Mongoose",
+    "like",
+    "models",
+    "for",
+    "ampt",
+    "data"
+  ],
+  "author": "Isaac Robles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roblesisaac/amptModel/issues"
+  },
+  "homepage": "https://github.com/roblesisaac/amptModel#readme"
+}
