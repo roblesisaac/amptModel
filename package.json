@@ -1,6 +1,6 @@
 {
   "name": "ampt-model",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Mongoose like models for ampt data",
   "main": "index.js",
   "type": "module",
