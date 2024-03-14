@@ -1,6 +1,6 @@
 import { data } from '@ampt/data';
 import validator from './validate';
-import { generateDate } from '../../../src/utils';
+import generateDate from './utils/generate-date';
 import LabelsMap from './labelsMap';
 
 export default function(collectionNameConfig, schemaConfig, globalConfig) {

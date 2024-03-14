@@ -4,7 +4,7 @@
   "description": "Mongoose like models for ampt data",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest --coverage"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,9 @@
   "homepage": "https://github.com/roblesisaac/amptModel#readme",
   "dependencies": {
     "@ampt/data": "^1.0.18"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^1.3.1",
+    "vitest": "^1.3.1"
   }
 }
