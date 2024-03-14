@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/roblesisaac/amptModel/issues"
   },
-  "homepage": "https://github.com/roblesisaac/amptModel#readme"
+  "homepage": "https://github.com/roblesisaac/amptModel#readme",
+  "dependencies": {
+    "@ampt/data": "^1.0.18"
+  }
 }
