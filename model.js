@@ -95,7 +95,9 @@ export default function(collectionNameConfig, schemaConfig, globalConfig) {
         return { items: [null] };
       }
 
-      const items = await validateItems(response.items || { key: filter, value: response });
+      const items = response.hasOwnProperty('key') && response.hasOwnProperty('items')
+        ? await validateItems(response.items)
+        : await validateItems({ key: filter, value: response })
 
       return { items, next: response.next, lastKey: response.lastKey };
     };
