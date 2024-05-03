@@ -49,6 +49,8 @@ export default function createLabelMap(collectionName, config) {
   }
 
   function createLabelValue(_id, labelName, labelValue) {
+    labelValue = String(labelValue);
+
     if (!labelValue.includes('*')) {
       labelValue += '*';
     }
@@ -95,6 +97,8 @@ export default function createLabelMap(collectionName, config) {
 
       const labelName = typeof labelConfig === 'function'
         ? labelNumber
+        : isObject(labelConfig) && labelConfig.concat && !labelConfig.name && Array.isArray(labelConfig.concat)
+        ? labelConfig.concat.join('_')
         : labelConfig.name || labelConfig;
 
       labelNames[labelName] = labelNumber;
