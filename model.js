@@ -86,12 +86,14 @@ export default function(collectionNameConfig, schemaConfig, globalConfig) {
   }
 
   async function find(filter, options) {
-    filter = filter || `${collectionNameConfig}:*`;
-
+    if(!filter || Object.keys(filter).length === 0) {
+      filter = `${collectionNameConfig}:*`;
+    }
+    
     if(typeof filter === 'string') {
       const response = await data.get(filter, options);
 
-      if(!response || !response.items?.length) {
+      if(responseIsNull(response)) {
         return { items: [] };
       }
 
@@ -141,6 +143,26 @@ export default function(collectionNameConfig, schemaConfig, globalConfig) {
 
   function makeArray(value) {
     return Array.isArray(value) ? value : [value];
+  }
+
+  function responseIsNull(response) {
+    if (response === null || response === undefined) {
+      return true;
+    }
+
+    if (Array.isArray(response) && response.length === 0) {
+      return true;
+    }
+
+    if(response.items && response.items.length === 0) {
+      return true;
+    }
+
+    if (typeof response === 'object' && Object.keys(response).length === 0) {
+      return true;
+    }
+
+    return false;
   }
 
   async function save(value) {
