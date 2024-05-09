@@ -91,8 +91,8 @@ export default function(collectionNameConfig, schemaConfig, globalConfig) {
     if(typeof filter === 'string') {
       const response = await data.get(filter, options);
 
-      if(!response) {
-        return { items: [null] };
+      if(!response || !response.items?.length) {
+        return { items: [] };
       }
 
       const items = response.hasOwnProperty('items') && response.items?.[0]?.key && response.items?.[0]?.value
