@@ -62,7 +62,7 @@ export default function(collectionNameConfig, schemaConfig, globalConfig) {
   function extractCollectionFromId(id) {
     return id.split(':')[0];
   }
-
+  
   function extractSchema(schemaConfig) {
     const schema = {};
 
