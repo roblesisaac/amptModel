@@ -95,7 +95,7 @@ export default function(collectionNameConfig, schemaConfig, globalConfig) {
         return { items: [null] };
       }
 
-      const items = response.hasOwnProperty('key') && response.hasOwnProperty('items')
+      const items = response.hasOwnProperty('items') && response.items?.[0]?.key && response.items?.[0]?.value
         ? await validateItems(response.items)
         : await validateItems({ key: filter, value: response })
 
