@@ -93,7 +93,7 @@ export default function(collectionNameConfig, schemaConfig, globalConfig) {
     if(typeof filter === 'string') {
       const response = await data.get(filter, options);
 
-      if(responseIsNull(response)) {
+      if(filter?.includes?.('*') & responseIsNull(response)) {
         return { items: [] };
       }
 
